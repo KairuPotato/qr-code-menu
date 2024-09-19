@@ -3,27 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu QR Code</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <title>Image Gallery</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-        #qrcode { margin-top: 20px; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .gallery img {
+            max-width: 300px;
+            height: auto;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
-    <h1>Scan the QR Code to View the Menu</h1>
-    <div id="qrcode"></div>
-
-    <script type="text/javascript">
-        // Replace this URL with your actual menu URL
-        var menuUrl = "https://example.com/menu";
-
-        // Generate QR code and display it in the div
-        var qrcode = new QRCode(document.getElementById("qrcode"), {
-            text: menuUrl,
-            width: 256,
-            height: 256,
-        });
-    </script>
+    <h1>Image Gallery</h1>
+    <div class="gallery">
+        <img src="Menu1.jpeg" alt="Image 1">
+        <img src="Menu2.jpeg" alt="Image 2">
+        <!-- Add more images as needed -->
+    </div>
 </body>
 </html>
