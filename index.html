@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu QR Code</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+        #qrcode { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Scan the QR Code to View the Menu</h1>
+    <div id="qrcode"></div>
+
+    <script type="text/javascript">
+        // Replace this URL with your actual menu URL
+        var menuUrl = "https://example.com/menu";
+
+        // Generate QR code and display it in the div
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            text: menuUrl,
+            width: 256,
+            height: 256,
+        });
+    </script>
+</body>
+</html>
